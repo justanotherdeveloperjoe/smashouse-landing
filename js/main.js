@@ -97,17 +97,28 @@
     var dow = now.getDay();
     var mins = now.getHours() * 60 + now.getMinutes();
     var isOpenDay = OPEN_DAYS.indexOf(dow) !== -1;
+    var isRestDay = dow === 0 || dow === 1; /* domingo y lunes */
     var openNow = isOpenDay && mins >= OPEN_MIN && mins < CLOSE_MIN;
+    var untilOpen = OPEN_MIN - mins; /* solo relevante si abre hoy */
+    var WARMUP_MIN = 45;
+    var warming = isOpenDay && untilOpen > 0 && untilOpen <= WARMUP_MIN;
 
     var msg;
     if (openNow) {
       msg = 'Abierto ahora · cerramos a las 11:00 PM';
+    } else if (warming) {
+      msg = 'Calentando la plancha · abrimos en ' + untilOpen + ' min';
     } else if (isOpenDay && mins < OPEN_MIN) {
-      msg = 'Cerrado · abrimos hoy a las 6:30 PM';
+      var hrs = Math.floor(untilOpen / 60), rem = untilOpen % 60;
+      msg = 'Cerrado · la plancha se enciende en ' +
+        (hrs > 0 ? hrs + ' h ' + rem + ' min' : rem + ' min');
     } else {
       var d = dow, add = 0;
       do { d = (d + 1) % 7; add++; } while (OPEN_DAYS.indexOf(d) === -1);
-      msg = 'Cerrado · abrimos ' + (add === 1 ? 'mañana' : 'el ' + DAY_NAMES[d]) + ' a las 6:30 PM';
+      var when = (add === 1 ? 'mañana' : 'el ' + DAY_NAMES[d]) + ' a las 6:30 PM';
+      msg = isRestDay
+        ? 'La plancha está descansando · volvemos ' + when
+        : 'Cerrado · abrimos ' + when;
     }
 
     var pill = head.querySelector('.status-pill');
@@ -117,6 +128,7 @@
       head.appendChild(pill);
     }
     pill.classList.toggle('is-open', openNow);
+    pill.classList.toggle('is-warming', warming);
     pill.innerHTML = '<span class="dot"></span>' + msg;
 
     var todayIdx = (dow + 6) % 7; /* tarjetas ordenadas lun..dom */

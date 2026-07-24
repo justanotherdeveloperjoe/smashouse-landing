@@ -354,6 +354,15 @@
     background: var(--ink-subtle); flex-shrink: 0;
   }
   .status-pill.is-open { border-color: rgba(231, 241, 30, 0.45); color: var(--volt); }
+  .status-pill.is-warming { border-color: rgba(255, 154, 46, 0.5); color: #ffb347; }
+  .status-pill.is-warming .dot {
+    background: #ff9a2e;
+    animation: dot-pulse-warm 1.4s ease-out infinite;
+  }
+  @keyframes dot-pulse-warm {
+    0% { box-shadow: 0 0 0 0 rgba(255, 154, 46, 0.45); }
+    70%, 100% { box-shadow: 0 0 0 7px rgba(255, 154, 46, 0); }
+  }
   .status-pill.is-open .dot {
     background: var(--volt);
     animation: dot-pulse 2s ease-out infinite;
