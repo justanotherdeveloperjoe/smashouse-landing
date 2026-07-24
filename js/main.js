@@ -48,6 +48,22 @@
     cv.remove();
   }
 
+  /* Hero entrance: one-time staggered fade/rise on load, via anime.js */
+  if (window.anime && !reduce) {
+    var heroEls = document.querySelectorAll(
+      '.hand-eyebrow, .hero-inner h1, .hero-inner .lede, .hero-actions, .hero-meta, .hero-art'
+    );
+    if (heroEls.length) {
+      anime.animate(heroEls, {
+        opacity: [0, 1],
+        translateY: [18, 0],
+        duration: 700,
+        delay: anime.stagger(90),
+        ease: 'outQuart'
+      });
+    }
+  }
+
   /* Hero doodle tilts with scroll */
   var doodle = document.querySelector('.hero-art .blob svg');
   if (doodle && !reduce) {
