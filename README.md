@@ -2,7 +2,9 @@
 
 **Smash burgers a la plancha, como debe ser.** Landing page for [Smashouse](https://www.instagram.com/smashouse) — Allende, Nuevo León, México.
 
-One file. Zero dependencies. No build step. The entire site — fonts, photos, logo, animations — ships as a single self-contained `index.html` that works offline and can be dropped onto any static host (GitHub Pages, Netlify, a USB stick) as-is.
+**Live site:** https://justanotherdeveloperjoe.github.io/smashouse-landing/
+
+Zero dependencies. No build step. No external requests — fonts, photos, and icons are all served from this repo, so the site works offline and can be dropped onto any static host (GitHub Pages, Netlify, a USB stick) as-is.
 
 ![Desktop preview](docs/preview-desktop.png)
 
@@ -43,16 +45,22 @@ Dark canvas with a single loud accent, inspired by Linear's restraint — then s
 | Display | **Anton** | condensed all-caps headlines |
 | Hand | **Caveat** | prices & margin notes, like the physical menu |
 
-Both fonts are subset and embedded as data URIs — no external requests, no FOUT.
+Both fonts are subset and self-hosted — no external requests, no FOUT.
 
-## 📁 Contents
+## 📁 Project structure
 
 ```
-index.html            ← the whole site (≈700 KB, everything embedded)
-assets/               ← source images kept for future edits
+index.html            ← markup + SEO/OG meta
+css/styles.css        ← all styles (design tokens, sections, motion)
+js/main.js            ← particle field, scroll effects, live horarios
+favicon.ico           ← 16/32/48 multi-size icon
+site.webmanifest      ← PWA-style icons & theme color
+assets/
   logo-full.png         mark + script wordmark
   logo-mark.png         circular mark (nav / footer)
   smash.jpg · oklahoma.jpg · crispy.jpg · plancha.jpg
+  fonts/                anton.woff2 · caveat.woff2
+  icons/                favicon PNGs · apple-touch-icon · PWA icons
 docs/                 ← README previews
 ```
 
