@@ -96,7 +96,7 @@
   /* ---------- Hero ---------- */
   .hero { border-bottom: 1px solid var(--hairline); overflow: hidden; }
   .hero-inner {
-    max-width: var(--maxw); margin: 0 auto; padding: 88px 24px 96px;
+    max-width: var(--maxw); margin: 0 auto; padding: 64px 24px 72px;
     display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: start;
   }
   .hand-eyebrow {
@@ -139,9 +139,9 @@
   }
   .hero-meta b { color: var(--ink-muted); font-weight: 600; }
 
-  .hero-art { position: relative; display: flex; align-items: center; justify-content: center; margin-top: 44px; }
+  .hero-art { position: relative; display: flex; align-items: center; justify-content: center; margin-top: 8px; }
   .blob {
-    width: min(560px, 95vw); aspect-ratio: 1;
+    width: min(500px, 90vw); aspect-ratio: 1;
     display: flex; align-items: center; justify-content: center;
     position: relative;
   }
