@@ -248,11 +248,10 @@
   }
   .frame svg { width: 110px; height: auto; opacity: 0.9; }
   .frame span { font-family: var(--hand); font-size: 1.3rem; color: var(--ink-subtle); text-align: center; }
-  .frame.filled { padding: 0; border-style: solid; overflow: hidden; }
+  .frame.filled { padding: 0; border-style: solid; overflow: hidden; aspect-ratio: 4 / 3; }
   .frame.filled img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .item-row.photo-card { max-width: 230px; }
   .item-photo {
-    grid-column: 1 / -1; aspect-ratio: 4 / 3; border-radius: 10px;
+    grid-column: 1 / -1; aspect-ratio: 16 / 9; border-radius: 10px;
     overflow: hidden; margin-bottom: 16px; border: 1px solid var(--hairline);
   }
   .item-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
