@@ -49,7 +49,7 @@
   }
 
   /* Hero doodle tilts with scroll */
-  var doodle = document.querySelector('.hero-art .blob svg');
+  var doodle = document.querySelector('.hero-art .blob img');
   if (doodle && !reduce) {
     var ticking = false;
     window.addEventListener('scroll', function () {

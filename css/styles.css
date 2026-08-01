@@ -142,12 +142,10 @@
   .hero-art { position: relative; display: flex; justify-content: center; }
   .blob {
     width: min(380px, 80vw); aspect-ratio: 1;
-    background: var(--volt);
-    border-radius: 58% 42% 55% 45% / 52% 48% 56% 44%;
     display: flex; align-items: center; justify-content: center;
     position: relative;
   }
-  .blob svg { width: 72%; height: auto; }
+  .blob img { width: 100%; height: 100%; object-fit: contain; }
   .photo-note {
     position: absolute; bottom: -14px; right: -6px;
     font-family: var(--hand); font-size: 1.25rem; color: var(--ink-muted);
