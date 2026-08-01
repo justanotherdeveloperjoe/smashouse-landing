@@ -251,7 +251,7 @@
   }
   .frame svg { width: 110px; height: auto; opacity: 0.9; }
   .frame span { font-family: var(--hand); font-size: 1.3rem; color: var(--ink-subtle); text-align: center; }
-  .frame.filled { padding: 0; border-style: solid; overflow: hidden; aspect-ratio: 4 / 3; }
+  .frame.filled { display: block; padding: 0; border-style: solid; overflow: hidden; aspect-ratio: 4 / 3; }
   .frame.filled img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .item-photo {
     grid-column: 1 / -1; aspect-ratio: 16 / 9; border-radius: 10px;
