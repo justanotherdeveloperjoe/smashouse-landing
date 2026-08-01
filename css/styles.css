@@ -249,16 +249,11 @@
   .frame span { font-family: var(--hand); font-size: 1.3rem; color: var(--ink-subtle); text-align: center; }
   .frame.filled { padding: 0; border-style: solid; overflow: hidden; }
   .frame.filled img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .frame.with-inset { position: relative; }
-  .frame.with-inset img.inset {
-    position: absolute; left: -6%; bottom: 8%; width: 52%; height: auto;
-    aspect-ratio: 1 / 1; border-radius: 10px; border: 4px solid var(--paper);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
-    transform: rotate(-4deg);
+  .item-photo {
+    grid-column: 1 / -1; aspect-ratio: 16 / 10; border-radius: 10px;
+    overflow: hidden; margin-bottom: 16px; border: 1px solid var(--hairline);
   }
-  @media (max-width: 880px) {
-    .frame.with-inset img.inset { left: -4%; width: 46%; }
-  }
+  .item-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   .bev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
   @media (max-width: 720px) { .bev-grid { grid-template-columns: 1fr; } }
@@ -381,6 +376,16 @@
     0% { box-shadow: 0 0 0 0 rgba(231, 241, 30, 0.4); }
     70%, 100% { box-shadow: 0 0 0 7px rgba(231, 241, 30, 0); }
   }
+  .grill-status {
+    position: absolute; top: 50%; right: 0;
+    width: 84px; height: 84px; object-fit: contain;
+    opacity: 0; transform: translateY(-50%) scale(0.8);
+    filter: drop-shadow(0 0 10px rgba(255, 46, 46, 0.55));
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+  }
+  .grill-status.is-active { opacity: 1; transform: translateY(-50%) scale(1); }
+  @media (max-width: 720px) { .grill-status { display: none; } }
   .day { position: relative; }
   .day.today { border-color: rgba(231, 241, 30, 0.6); }
   .day.today.open-now { box-shadow: 0 0 20px rgba(231, 241, 30, 0.15); }
