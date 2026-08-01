@@ -97,7 +97,7 @@
   .hero { border-bottom: 1px solid var(--hairline); overflow: hidden; }
   .hero-inner {
     max-width: var(--maxw); margin: 0 auto; padding: 88px 24px 96px;
-    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center;
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: start;
   }
   .hand-eyebrow {
     font-family: var(--hand); font-size: 1.7rem; color: var(--volt);
@@ -139,7 +139,7 @@
   }
   .hero-meta b { color: var(--ink-muted); font-weight: 600; }
 
-  .hero-art { position: relative; display: flex; align-items: center; justify-content: center; }
+  .hero-art { position: relative; display: flex; align-items: center; justify-content: center; margin-top: 44px; }
   .blob {
     width: min(560px, 95vw); aspect-ratio: 1;
     display: flex; align-items: center; justify-content: center;
@@ -154,7 +154,7 @@
   }
   @media (max-width: 880px) {
     .hero-inner { grid-template-columns: 1fr; padding: 64px 24px 72px; }
-    .hero-art { order: -1; }
+    .hero-art { order: -1; margin-top: 0; }
     .blob { width: min(360px, 82vw); }
   }
 
