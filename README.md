@@ -1,6 +1,6 @@
 # 🍔 Smashouse — Landing Page
 
-**Smash burgers a la plancha, como debe ser.** Landing page for [Smashouse](https://www.instagram.com/smashouse) — Allende, Nuevo León, México.
+**Smash burgers a la plancha, como debe ser.** Landing page for [Smashouse](https://www.instagram.com/smashouse.allende/) — Allende, Nuevo León, México.
 
 **Live site:** https://justanotherdeveloperjoe.github.io/smashouse-landing/
 
@@ -68,7 +68,7 @@ docs/                 ← README previews
 
 Smash Burger `$140/$175` · Oklahoma `$135/$170` · Crispy Onion Bacon `$150/$190` · Chicken `$145/$185` — **todas con papas incluidas**.
 
-Martes a sábado · 6:30 – 11:00 PM · 📞 [81 1633 0334](tel:+528116330334)
+Martes a sábado · 6:30 – 11:00 PM · 📞 [826 769 1737](tel:+5218267691737)
 
 ## 📝 Pending
 

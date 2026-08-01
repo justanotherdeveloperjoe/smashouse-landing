@@ -130,6 +130,9 @@
   .btn-volt:hover { filter: brightness(1.1); }
   .btn-ghost { background: var(--surface); color: var(--ink); border: 1px solid var(--hairline-strong); }
   .btn-ghost:hover { border-color: var(--ink-subtle); }
+  .btn-whatsapp { background: #25d366; color: #06210f; }
+  .btn-whatsapp:hover { filter: brightness(1.08); }
+  .btn-whatsapp svg { width: 18px; height: 18px; flex-shrink: 0; }
   .hero-meta {
     margin-top: 28px; display: flex; gap: 20px; flex-wrap: wrap;
     font-size: 0.85rem; color: var(--ink-subtle);
