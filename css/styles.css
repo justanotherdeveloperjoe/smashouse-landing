@@ -160,6 +160,21 @@
     .blob { width: min(260px, 70vw); }
   }
 
+  /* Hero entrance: one-time staggered fade/rise, pure CSS (no JS animation lib) */
+  @media (prefers-reduced-motion: no-preference) {
+    .hand-eyebrow, .hero-inner h1, .hero-inner .lede, .hero-actions, .hero-meta, .hero-art {
+      opacity: 0; translate: 0 18px;
+      animation: hero-in 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    .hand-eyebrow { animation-delay: 0ms; }
+    .hero-inner h1 { animation-delay: 90ms; }
+    .hero-inner .lede { animation-delay: 180ms; }
+    .hero-actions { animation-delay: 270ms; }
+    .hero-meta { animation-delay: 360ms; }
+    .hero-art { animation-delay: 450ms; }
+  }
+  @keyframes hero-in { to { opacity: 1; translate: 0 0; } }
+
   /* ---------- Sections ---------- */
   .section { padding: 88px 0; border-bottom: 1px solid var(--hairline); }
   .chip {
