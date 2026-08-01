@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Smashouse — Smash Burgers · Allende, N.L.</title>
   <meta name="description" content="Smash burgers a la plancha en Allende, Nuevo León. Martes a sábado de 6:30 a 11:00 PM. Todas las burgers incluyen papas. Pide al 81 1633 0334." />
+  <meta name="keywords" content="smash burger, hamburguesas, Allende Nuevo León, papas, comida rápida, Smashouse, burgers a la plancha" />
+  <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#070708" />
 
   <link rel="icon" href="favicon.ico" sizes="48x48" />
@@ -13,15 +15,24 @@
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="canonical" href="https://smashouseburger.com/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Smashouse" />
   <meta property="og:title" content="Smashouse — Smash Burgers · Allende, N.L." />
   <meta property="og:description" content="Smash burgers a la plancha, como debe ser. Martes a sábado, 6:30 – 11:00 PM. Todas las burgers incluyen papas." />
   <meta property="og:url" content="https://smashouseburger.com/" />
   <meta property="og:image" content="https://smashouseburger.com/assets/smash-burger.jpg" />
+  <meta property="og:image:width" content="644" />
+  <meta property="og:image:height" content="577" />
   <meta property="og:locale" content="es_MX" />
 
-  <link rel="stylesheet" href="css/styles.css?v=13" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Smashouse — Smash Burgers · Allende, N.L." />
+  <meta name="twitter:description" content="Smash burgers a la plancha, como debe ser. Martes a sábado, 6:30 – 11:00 PM. Todas las burgers incluyen papas." />
+  <meta name="twitter:image" content="https://smashouseburger.com/assets/smash-burger.jpg" />
+
+  <link rel="stylesheet" href="css/styles.css?v=14" />
 
   <script type="application/ld+json">
   {
@@ -48,10 +59,71 @@
         "closes": "23:00"
       }
     ],
+    "areaServed": "Allende, Nuevo León",
     "sameAs": [
       "https://www.instagram.com/smashouse.allende/",
       "https://www.facebook.com/profile.php?id=61575147972633"
-    ]
+    ],
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "Menú Smashouse",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Hamburguesas",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Smash Burger",
+              "description": "Carne de res, queso cheddar, tomate, cebolla, lechuga, aguacate, aderezo casero y pepinillos.",
+              "offers": { "@type": "Offer", "price": "140", "priceCurrency": "MXN" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Oklahoma Burger",
+              "description": "Carne de res smasheada con cebolla, queso cheddar, aderezo y pepinillos caseros.",
+              "offers": { "@type": "Offer", "price": "135", "priceCurrency": "MXN" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Crispy Onion Bacon",
+              "description": "Carne de res, queso cheddar, cebolla crujiente, tocino, aderezo y pepinillos caseros.",
+              "offers": { "@type": "Offer", "price": "150", "priceCurrency": "MXN" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Chicken Burger",
+              "description": "Pechuga de pollo, queso cheddar, tomate, cebolla, lechuga, aguacate, aderezo casero y pepinillos.",
+              "offers": { "@type": "Offer", "price": "145", "priceCurrency": "MXN" }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Papas",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Papas Sencillas",
+              "description": "Papas a la francesa con una deliciosa salsa de queso y tocino.",
+              "offers": { "@type": "Offer", "price": "60", "priceCurrency": "MXN" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Papas House Sencillas",
+              "description": "Papas a la francesa con salsa de queso, bañadas en aderezo de la casa, con cebolla crispy y tocino.",
+              "offers": { "@type": "Offer", "price": "90", "priceCurrency": "MXN" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Papas House Especiales",
+              "description": "Papas a la francesa con salsa de queso, bañadas en aderezo de la casa, con cebolla crispy, tocino y carne de hamburguesa o pechuga de pollo.",
+              "offers": { "@type": "Offer", "price": "140", "priceCurrency": "MXN" }
+            }
+          ]
+        }
+      ]
+    }
   }
   </script>
 </head>
