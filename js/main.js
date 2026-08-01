@@ -164,4 +164,35 @@
   }
   renderHorarios();
   setInterval(renderHorarios, 60000);
+
+  /* Lightbox: click a burger/papas photo to see it full-size */
+  var lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    var lbImg = lightbox.querySelector('img');
+    var lbClose = lightbox.querySelector('.lightbox-close');
+
+    var openLightbox = function (img) {
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+    var closeLightbox = function () {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll('.burger-photo img, .item-photo img').forEach(function (img) {
+      img.addEventListener('click', function () { openLightbox(img); });
+    });
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
 })();
